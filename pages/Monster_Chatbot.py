@@ -222,7 +222,16 @@ if user_message:
     try:
         with st.chat_message("assistant"):
             with st.spinner("Thinking about monster tactics..."):
-                response = model.generate_content(full_prompt)
+                response = model.generate_content(
+    [
+        {
+            "role": "user",
+            "parts": [{"text": full_prompt}]
+        }
+    ]
+)
+assistant_reply = response.text
+
                 assistant_reply = response.text.strip()
                 st.markdown(assistant_reply)
 
@@ -237,3 +246,4 @@ if user_message:
             "or an invalid request. Please try again in a moment."
         )
         st.caption(f"Debug info: {e}")
+
