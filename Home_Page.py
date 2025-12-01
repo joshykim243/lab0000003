@@ -23,8 +23,8 @@ Welcome to our Streamlit Web Development Lab03 app! You can navigate between the
 
 1. Home Page
 2. Build Your Character: This page lets you create and customize an elite D&D dragon slayer!
-3. To Be Determined
-4. To Be Determined
+3. Monster Build: This page lets you choose two monsters and make a battle plan!
+4. Monster Chat Bot: This page didn't work.
 
 """)
 
