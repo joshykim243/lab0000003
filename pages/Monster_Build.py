@@ -7,7 +7,7 @@ api_key = st.secrets.get("GOOGLE_API_KEY", None)
 
 if api_key:
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel("gemini-1.5-pro")
+    model = genai.GenerativeModel("gemini-2.0-flash")
 else:
     model = None
 
@@ -224,4 +224,5 @@ if st.button("Analyze Monsters and Generate LLM Battle Plan", disabled=(model is
         except Exception as e:
             st.error(f"Something went wrong while calling the Gemini API: {e}")
             st.info("Double-check your API key and internet connection, then try again.")
+
 
